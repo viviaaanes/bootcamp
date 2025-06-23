@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Clientes</title>
+</head>
+
+<body>
+    <div class="container">
+        <form name="signup" method="get" action="/login.html">
+            <h3>Cadastro de Clientes</h3>
+            <label>Nome:</label><input type="text" name="name"> <br>
+            <label>Email:</label><input type="email" name="email"><br>
+            <label>Telefone:</label><input type="tel" name="tel"><br>
+            <label>Senha:</label><input type="password" name="password" /><br>
+            <label>Áreas de interesse:</label> <br>
+            <input type="checkbox" name="area[]" value="comercial"><label>Comercial</label> <br>
+            <input type="checkbox" name="area[]" value="Residencial"><label>Residencial</label> <br>
+            <input type="checkbox" name="area[]" value="Industrial"><label>Industrial</label><br>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+
+</html>
