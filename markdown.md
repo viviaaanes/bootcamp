@@ -119,6 +119,7 @@ Radio → Radios servem para escolher apenas uma opção entre várias. Para iss
 ```html
 <input type="radio" name="pagamento" value="pix">
 <input type="radio" name="pagamento" value="cartao">
+```
 
 ### Formatações de texto no HTML
 
