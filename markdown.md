@@ -119,3 +119,40 @@ Radio → Radios servem para escolher apenas uma opção entre várias. Para iss
 ```html
 <input type="radio" name="pagamento" value="pix">
 <input type="radio" name="pagamento" value="cartao">
+
+### Formatações de texto no HTML
+
+| **TAG** | **Função** |
+| --- | --- |
+| `<i>` | Deixa o texto em itálico (não tem significado semântico). |
+| `<u>` | Sublinha o texto |
+| `<b>` | Deixa o texto em negrito (estética, sem significado semântico). |
+| `<mark>` | Destaca o texto como se fosse marca-texto. |
+| `<sup>` | Coloca o texto acima da linha (ex: expoente `10<sup>2</sup>`). |
+| `<sub>` | Coloca o texto abaixo da linha (ex: fórmula química `H<sub>2</sub>O`). |
+| `<blockquote>` | Destaca uma citação ou trecho, com recuo à esquerda. |
+| `<strong>` | Deixa o texto em negrito, com significado semântico de ênfase. (Usado por leitores de tela e acessibilidade). |
+| `<em>` | Deixa o texto em itálico, mas com ênfase semântica (tipo “destaque verbal”). |
+| `<font>` | era usada antigamente para mudar a cor, o tipo e o tamanho da fonte direto no HTML. Hoje em dia, não é mais recomendada, porque essa função deve ser feita com CSS. (ex: `<font color=”red” face =”Arial”>`Texto em vermelho e Arial`</font>`). |
+
+### Semântica no HTML
+
+Semântica → Semântica é escrever o HTML de forma que o código faça sentido por si só, tanto para humanos quanto para máquinas (navegadores, leitores de tela e etc).
+
+### Estruturando HTML
+
+`<div>` → Usada para estruturar blocos do seu código HTML.
+
+Por padrão, ela tem um `display: block`, ou seja, ocupa toda a largura disponível e quebra linha automaticamente. Usada para:
+
+- Agrupar conteúdos (textos, imagens, formularios etc).
+- Criar seções.
+- Trabalhar com layout (CSS).
+
+`<span>` → Usada para selecionar partes pequenas e específicas do texto ou elementos inline, quando queremos aplicar algum estilo ou comportamento sem quebrar a linha.
+Por padrão, tem `display: inline`, ou seja, não quebra a linha.
+
+`<fieldset>` → Como tudo no HTML, ela é uma tag estrutural.
+Ela é usada dentro de formulários para agrupar campos relacionados e dar uma aparência visual diferenciada, com uma borda ao redor do grupo.
+
+`<legend>` → Usada junto com o `<fieldset>`, ela serve como título do grupo de campos. Aparecendo por padrão acima da borda do fieldset.

@@ -11,16 +11,39 @@
 <body>
     <div class="container">
         <form name="signup" method="get" action="/login.html">
-            <h3>Cadastro de Clientes</h3>
-            <label>Nome:</label><input type="text" name="name"> <br>
-            <label>Email:</label><input type="email" name="email"><br>
-            <label>Telefone:</label><input type="tel" name="tel"><br>
-            <label>Senha:</label><input type="password" name="password" /><br>
-            <label>Áreas de interesse:</label> <br>
-            <input type="checkbox" name="area[]" value="comercial"><label>Comercial</label> <br>
-            <input type="checkbox" name="area[]" value="Residencial"><label>Residencial</label> <br>
-            <input type="checkbox" name="area[]" value="Industrial"><label>Industrial</label><br>
-            <button type="submit">Cadastrar</button>
+            <fieldset>
+                <legend><strong>Formulário de Cadastro</strong></legend>
+                <fieldset>
+                    <legend>
+                        <strong>Dados pessoais</strong>
+                    </legend>
+                    <label>Nome Completo:</label><input type="text" name="name"> <br>
+                    <label>Email:</label><input type="email" name="email"><br>
+                    <label>Telefone:</label><input type="tel" name="tel"><br>
+                    <label>Data de Nascimento:</label><input type="date" name="nascimento"></input><br>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <strong>Áreas de interesse</strong>
+                    </legend>
+                    <label>Comercial</label><input type="checkbox" name="area[]" value="comercial"> <br>
+                    <label>Residencial</label><input type="checkbox" name="area[]" value="Residencial"> <br>
+                    <label>Industrial</label><input type="checkbox" name="area[]" value="Industrial"><br>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <strong>Endereço</strong>
+                    </legend>
+                    <label>Cep:</label><input type="text" name="cep"></input><br>
+                    <label>Logradouro:</label><input type="text" name="logradouro"></input><br>
+                    <label>Número:</label><input type="number" name="numeroEndereco"></input><br>
+                    <label>Complemento:</label><input type="text" name="complemento"></input><br>
+                    <label>Bairro:</label><input type="text" name="bairro"></input><br>
+                    <label>Senha:</label><input type="password" name="password" /><br>
+                    <label>Confirme sua senha:</label><input type="password" name="confirmaSenha"></input><br>
+                </fieldset>
+                <button type="submit">Cadastre-se</button>
+            </fieldset>
         </form>
     </div>
 </body>
