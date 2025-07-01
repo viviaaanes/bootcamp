@@ -163,7 +163,7 @@ Ela é usada dentro de formulários para agrupar campos relacionados e dar uma a
 Ela permite carregar conteúdos de outros sites dentro da sua página, como vídeos do YouTube, mapas, formulários, entre outros.
 
 - src → Define qualpágina será carregada dentro do iframe.
-- width e height -: Definem o tamanho da janela
+- width e height -> Definem o tamanho da janela
 
 ```html
 <iframe width="560" height="315"
