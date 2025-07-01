@@ -157,3 +157,127 @@ Por padrão, tem `display: inline`, ou seja, não quebra a linha.
 Ela é usada dentro de formulários para agrupar campos relacionados e dar uma aparência visual diferenciada, com uma borda ao redor do grupo.
 
 `<legend>` → Usada junto com o `<fieldset>`, ela serve como título do grupo de campos. Aparecendo por padrão acima da borda do fieldset.
+
+`<iframe>` → É uma evolução do antigo `<embed>`.
+
+Ela permite carregar conteúdos de outros sites dentro da sua página, como vídeos do YouTube, mapas, formulários, entre outros.
+
+- src → Define qualpágina será carregada dentro do iframe.
+- width e height -: Definem o tamanho da janela
+
+```html
+<iframe width="560" height="315"
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  title="Vídeo do YouTube"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
+```
+
+- Quando você coloca um vídeo do youtube via `<iframe>`, quem recebe o view é o criador do vídeo, não você.
+Isso acontece porque o vídeo ainda está sendo hospedado e servido pelo youtube, e o `<iframe>` só está mostrando uma “janela” para o conteúdo. Ou seja, você está “pegando emprestado” o conteúdo externo.
+- Nem todo site permite ser carregado via iframe (pode bloquear via `X-Frame-Options`).
+- Não é indicado para conteúdo muito importante ou interações críticas (segurança e acessibilidade).
+- Muito útil para conteúdo externo não essencial: vídeos, mapas, calendários etc.
+
+### Trabalhando com mídias (imagens)
+
+`<img>` → Exibe uma imagem na página.
+
+```html
+<img src="imagem.jpg" alt="Descrição da imagem" title="Título da imagem" width="300">
+```
+
+`<svg>` → Representa imagens vetoriais (gráficos baseados em pontos e formas, não em pixels. Você pode ampliar ou reduzir sem perder qualidade.
+
+- src → Caminho da imagem (local ou URL da web).
+- alt → Texto alternativo (usado para leitores de tela e mostrado se a imagem não carregar).
+- title → Mostra um balão com texto ao passar o mouse.
+- width → Define a largura (a altura se ajusta automaticamente para não distorcer).
+- height → Pode ser definido, mas cuidado para não esticar a imagem.
+
+### formatos de imagem
+
+| **Formato** | **Vantagens** | **Desvantagens** | **Ideal para…** |
+| --- | --- | --- | --- |
+| **JPG** | Leve | Perde qualidade (compressão) | Fotos, galerias de imagem |
+| **PNG** | Alta qualidade + Transparência | Mais pesado | Logos, ícones, labels |
+| **GIF** | Animação simples | Baixa resolução, pesado | Figurinhas animadas, memes |
+| **SVG** | Vetorial (não perde qualidade) | Mais dificil de editar sem ferramenta  | Logos, ícones, graficos |
+
+### Trabalhando com mídias (audio)
+
+`<audio>` → É uma tag nativa do HTML5, usada para inserir e tocar arquivos de áudio diretamente no navegador.
+
+```html
+<audio controls>
+  <source src="musica.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio.
+</audio>
+```
+
+`<source>` → É  a tag filha da tag `<audio>` e define o caminho e o tipo do arquivo de áudio.
+Você pode colocar vários `<source>` com formatos diferentes para compatibilidade.
+
+```html
+<source src="musica.mp3" type="audio/mpeg">
+<source src="musica.ogg" type="audio/ogg">
+```
+
+### Atributos comuns:
+
+| **Atributo** | **Função** |
+| --- | --- |
+| **controls** | Mostra os controles padrão do navegador (play, pause, volume…) |
+| **autoplay** | O áudio começa a tocar automaticamente ao carregar a página (nem sempre funciona por questões de privacidade) |
+| **loop** | O áudio recomeça automaticamente quando termina |
+| **muted** | Começa o áudio com o som desligado |
+| **preload** | Controla o pré-carregamento (auto, metadata, none) |
+- Com JavaScript você pode criar seus próprios botões, controlar o tempo da música, volume etc.
+
+### Trabalhando com mídias (video)
+
+`<video>` → É uma tag nativa do HTML5 que permite exibir videos diretamente no navegador, sem precisar de plugins.
+
+```html
+<video controls width="640" height="360">
+  <source src="meuvideo.mp4" type="video/mp4">
+  Seu navegador não suporta vídeos.
+</video>
+```
+
+- A tag `<source>` define a origem do vídeo e o tipo (type). Você pode incluir vários `<source>` com formatos diferentes (mp4. ogg, webm).
+
+`<track>` → É usada dentro do `<video>` para adicionar legendas, trascrições, capítulos e descrições.
+
+- Normalmente usa o formato `.vtt` (WebVTT)
+- É um arquivo de texto que marca o tempo exato de cada parte da legenda ou capítulo.
+
+```html
+<video controls width="640" height="360">
+  <source src="aula.mp4" type="video/mp4">
+  <track src="legenda.vtt" kind="subtitles" srclang="pt" label="Português" default>
+</video>
+```
+
+### Atributos do `<track>`:
+
+| **Atributo** | **Função** |
+| --- | --- |
+| **src** | Caminho do arquivo `.vtt` |
+| **kind** | Tipo do conteúdo: `subtitles`, `captions`, `chapters`, `descriptions` |
+| **srclang** | Linguagem da legenda (`pt`, `en`, `es`…) |
+| **label** | Nome que vai aparecer no seletor de legendas |
+| **default** | Define que essa legenda ja vem ativada automaticamente. |
+
+Exemplo do conteúdo .vtt:
+
+```html
+WEBVTT
+
+00:00:00.000 --> 00:00:04.000
+Bem-vindo à nossa aula de HTML!
+
+00:00:05.000 --> 00:00:09.000
+Hoje vamos aprender sobre a tag <video>.
+```
