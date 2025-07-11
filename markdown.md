@@ -281,3 +281,74 @@ Bem-vindo à nossa aula de HTML!
 00:00:05.000 --> 00:00:09.000
 Hoje vamos aprender sobre a tag <video>.
 ```
+
+### Tabelas em HTML
+
+`<table>` → É usada para exibir dados em forma de tabela (linhas e colunas). Sozinha, ela não faz nada; precisa de outras tags para montar a estrutura.
+
+### Estrutura básica:
+
+```html
+<table>
+  <tr>
+    <td>Dado 1</td>
+    <td>Dado 2</td>
+  </tr>
+</table>
+```
+
+### Tags principais:
+
+| Tag | Função |
+| --- | --- |
+| `<table>` | Inicia a tabela e envolve tudo |
+| `<td>` | Cria uma célula (coluna) dentro da linha |
+| `<tr>` | Cria uma linha |
+| `<th>` | Célula de cabeçalho (fica em negrito e centralizada por padrão) |
+
+### Atributos antigos da tag `<table>` (funcionam ainda, mas hoje usamos CSS):
+
+| Atributo | O que faz |
+| --- | --- |
+| `border="1"` | Mostra as bordas da tabela |
+| `width="100%"` | Define a largura da tabela (em px ou %) |
+| `align="center"` | Centraliza a tabela na página |
+| `cellspacing="10”` | Espaçamento **entre as células** |
+| `cellpadding="5”` | Espaçamento **dentro das células** (entre o conteúdo e a borda) |
+- Hoje em dia, a formatação com `border`, `width`, `align`, etc., é feia com CSS, mas é legal conhecer esses atributos, principalmente para ler códigos anigos ou fazer testes rápidos.
+
+`<tr>` → Table Row (linha de tabela). Ela é usada para criar uma linha horizontal dentro de uma tabela.
+
+- Dentro da `<tr>`, você coloca células com `<td>` (dados) ou `<th>` (títulos).
+- Cada `<tr>` representa uma **nova linha** na sua tabela.
+
+`<th>` → Table Header (Título da coluna). A tag representa células de um cabeçalho em uma tabela. Ela aparece em negrito e centralizada por padrão, e ajuda a identificar o conteúdo das colunas.
+
+- Usar nomes simples e diretos no texto do cabeçalho, facilitando a leitura visual.
+- Usar o atributo title para detalhar melhor o que aquele cabeçalho representa, o que ajuda na acessibilidade (leitores de tela) e na experiência do usuário (ao passar o mouse).
+
+```html
+<tr>
+  <th title="Nome completo do usuário">Nome</th>
+  <th title="Idade atual em anos">Idade</th>
+</tr>
+```
+
+### Mesclar células em tabelas
+
+colspan, rowspan → Esses atributos servem para mesclar células na horizontal (colspan) e linhas na vertical (rowspan), ou seja, unir colunas e linhas. Usados dentro da tag `<td>` ou `<th>`, eles dizem quantas colunas ou linhas serão ocupadas.
+
+`<thead>`, `<tbody>`, `<tfoot>` → Organização semantica da tabela. Essas tags são auxiliares na estruturação da `<table>` e servem para organizar o conteúdo em seções: cabeçalho, corpo e rodapé.
+
+| Tag | O que representa | Uso principal |
+| --- | --- | --- |
+| `<thead>` | Cabeçalho da tabela | Agrupa as tags <th> (títulos das colunas) |
+| `<tbody>` | Corpo da tabela | Agrupa as tags <tr> com os dados |
+| `<tfoot>` | Rodapé da tabela | Agrupa o fechamento da tabela (ex: total) |
+- Essas tags não mudam a aparência visual da tabela. Mesmo que você coloque o `<tfoot>` antes do `<tbody>` no código, o navegador ainda mostrará ele por último, porque o HTML entende sua função semântica.
+- Melhora a organização e leitura do código. Facilita aplicar estilos com CSS ou manipulação JavaScript. Ajuda na acessibilidade e semântica do HTML.
+
+`<caption>` → Serve para dar um título geral para a tabela. Ela aparece visivelmente acima da tabela e também é lida por leitores de tela.
+
+- Colocar essa tag logo após a abertura da `<table>`.
+- Podemos usar atributos ARIA (como `aria-label`, `aria-describedby`) se precisar de descrições mais detalhadas e ocultas.
