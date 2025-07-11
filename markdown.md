@@ -342,8 +342,8 @@ colspan, rowspan → Esses atributos servem para mesclar células na horizontal 
 
 | Tag | O que representa | Uso principal |
 | --- | --- | --- |
-| `<thead>` | Cabeçalho da tabela | Agrupa as tags <th> (títulos das colunas) |
-| `<tbody>` | Corpo da tabela | Agrupa as tags <tr> com os dados |
+| `<thead>` | Cabeçalho da tabela | Agrupa as tags `<th>` títulos das colunas |
+| `<tbody>` | Corpo da tabela | Agrupa as tags `<tr>` com os dados |
 | `<tfoot>` | Rodapé da tabela | Agrupa o fechamento da tabela (ex: total) |
 - Essas tags não mudam a aparência visual da tabela. Mesmo que você coloque o `<tfoot>` antes do `<tbody>` no código, o navegador ainda mostrará ele por último, porque o HTML entende sua função semântica.
 - Melhora a organização e leitura do código. Facilita aplicar estilos com CSS ou manipulação JavaScript. Ajuda na acessibilidade e semântica do HTML.
