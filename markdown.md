@@ -352,3 +352,55 @@ colspan, rowspan → Esses atributos servem para mesclar células na horizontal 
 
 - Colocar essa tag logo após a abertura da `<table>`.
 - Podemos usar atributos ARIA (como `aria-label`, `aria-describedby`) se precisar de descrições mais detalhadas e ocultas.
+
+### HTML Semântico + Acessibilidade
+
+HTML semântico significa usar as tags corretas para o conteúdo certo, tornando o código mais legível, organizado e compreensível tanto para humanos quanto para máquinas (como leitores de tela e motores de busca).
+
+| **Tag** | **Função** |
+| --- | --- |
+| `<header>` | Cabeçalho da página ou seção |
+| `<nav>` | Navegação (menu, links principais) |
+| `<main>` | Conteúdo principal da página |
+| `<section>` | Seção de conteúdo relacionada |
+| `<article>` | Conteúdo independente (ex: post de blog) |
+| `<aside>` | Conteúdo lateral ou complementar |
+| `<footer>` | Rodapé da página ou seção |
+| `<figure>` | Imagem com legenda |
+| `<mark>` | Marca uma parte importante do texto |
+| `<time>` | Representa uma data e um horario |
+
+aria → São atributos que não mudam o comportamento da sua tag mas mudam a árvore de acessibilidade.
+
+web scraping → É  uma tecnica usada para coletar informações de sites automaticamente. Em vez de copiar manualmente os dados, um programa faz isso por você, lendo o código da página (HTML) e pegando o que interessa.
+
+- Sempre confira se o site permite scraping. Muitos têm regras no arquivo `robot.txt`.
+
+`<main>` → É  o conteúdo principal da página, ou seja, aquilo que é mais importante e único para aquela URL. Só pode existir uma única tag `<main>` por página, e ela deve ser filha direta do `<body>`, e não deve estar dentro de `<header>`, `<footer>`, `<article>` ou `<aside>`.
+
+`<section>` → Serve para agrupar conteúdos relacionados dentro de uma página. É como uma `<div>` mas com significado. Pode conter títulos, textos, imagens, listas etc. Pode conter varias `<section>` em uma mesma página e é ideal para dividir um conteúdo em blocos organizados como: (”sobre”, “serviços”, “projetos”).
+
+`<aside>` → Representa um conteúdo indireto ou secundario ao conteúdo principal da página, é usado para informações de apoio, como: Contatos, Anúncios, Links relacionados, Banners…
+
+`<nav>` → Tag usada para envolver links de navegação principais da página. Indica para o navegador e para os leitores de tela que ali está o menu do site. Pode aparecer no `<header>`, `<footer>`, ou em qualquer parte do site onde exista uma lista de links de navegação.
+
+| **Tag** | **Função Principal** |
+| --- | --- |
+| `<section>` | Agrupar conteúdo relacionado |
+| `<aside>` | Conteúdo complementar, fora do assunto principal |
+| `<nav>` | Menu de navegação com links principais |
+
+`<article>` → Conteúdo independente (posts, artigos, notícias). Representa um conteúdo autocontido, que faz sentido sozinho. Ideal para posts de blog, notícias, cards, produtos, comentários. Pode ficar dentro de uma `<section>` ou conter outros `<article>`
+
+`<blockquote>` → Citação longa (com quebra de linha). Usado para inserir uma citação extensa de outro autor ou fonte. Por padrão, cria recuo na lateral esuqerda. Possui o atributo cite para indicar a fonte da citação.
+
+`<q>` → Citação curta (sem quebra de linha). Usada para citações pequenas dentro do texto, geralmente uma ou duas frases. Automaticamente coloca aspas em volta do conteúdo e também possui o atributo cite.
+
+`<figure>` → Imagem (ou mídia) com contexto. Serve como container para qualquer conteúdo visual: imagem, gráfico, código, vídeo, ilustração, etc.
+Dá significado semântico ao conteúdo visual e pode conter a tag `<figcaption>` para explicar/descrever o que está sendo mostrado.
+
+`<figcaption>` → Legenda da imagem/figura. Usada dentro de `<figure>` para descrever a imagem ou o conteúdo. Ajuda na acessibilidade e compreensão do contexto e pode ser usada antes ou depois do conteúdo da `<figure>`.
+
+`<picture>` → Imagem adaptável (responsiva). Permite definir múltiplas fontes de imagem para exibir de acordo com a resolução/tamanho da tela. Útil para responsividade e otimização de performance, funciona junto com a tag `<source>` e o navegador escolhe qual imagem carregar com base nas regras do media
+
+SEO → Search Engine Optimization. Conjunto de técnicas para melhorar o posicionamento do seu site nos mecanismos de busca.
