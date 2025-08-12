@@ -1,153 +1,154 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de anotações</title>
+    <title>HTML: Fundamentos, Semântica e Acessibilidade</title>
 </head>
 
 <body>
+
     <header>
-        <h1>Anotações HTML -> Estrutura, Semântica e Acessibilidade</h1>
+        <h1>Resumo de HTML para iniciantes.</h1>
+        <p>Esse site foi criado para praticar tags aprendidas no curso de HTML da
+            <link rel="stylesheet" href="https://web.dio.me/">Dio.me
+        </p>
     </header>
-    <hr />
+
+    <hr>
+
     <main>
-        <a href="#introducaoHtml">Introdução ao HTML</a><br>
-        <a href="#atributosForm">Atributos importantes em formulários</a>
         <section>
-            <h1>Introdução ao HTML</h1>
-            <article id="introducaoHtml">
-                <h2>Aplicações Web</h2>
-                <p>São programas que funcionam direto no navegador, sem a necessidade de instalar qualquer app. Esses
-                    programas se comunicam com o servidor, fazendo requisições pela internet, utilizando tecnologias
-                    como:</p>
-                <ul>
-                    <li>HTTP/HTTPS</li>
-                    <li>APIs (REST, por exemplo)</li>
-                    <li>AJAX/fetch (no JavaScript)</li>
-                </ul>
-            </article>
-
             <article>
-                <h2>Requisição HTTP</h2>
-                <p>Quando uma URL é digitada ex: <mark>(google.com)</mark>, eu faço uma requisição HTTP. Essa URL é
-                    então
-                    traduzida para um endereço IP pela rede.
-                    A requisição vai até o servidor que hospeda o site.
-                    No servidor, um programa (ex: Apache ou Nginx) processa a requisição, lê o que estou pedindo (ex: a
-                    página principal), busca os arquivos necessários e me envia de volta uma resposta.
-                    O navegador recebe essa resposta e exibe o site na tela.</p>
-                <ul>
-                    <li>Uma requisição <i><strong>GET</strong></i> eu estou pedindo informações para o servidor.</li>
-                    <li>Uma requisição <i><strong>POST</strong></i> eu estou enviando informações para o servidor</li>
-                </ul>
-            </article>
-
-            <article>
-                <h2>Servidor Proxy</h2>
-                <p>Um servidor proxy é um servidor que fica entre o Client e a Internet.
-                    Ele aplica regras de acesso e, com base nelas, permite ou bloqueia o acesso do client a determinadas
-                    páginas.</p>
-            </article>
-
-            <article>
-                <h2>Firewall</h2>
-                <p>O firewall é um sistema/programa de segurança que protege a rede ou o computador. Ele analisa o que
-                    entra e sao pela internet e, se encontrar algo perigoso (como um arquivo malicioso), bloqueia o
-                    acesso para manter tudo seguro.</p>
-            </article>
-            <article>
-                <h2>Servidor DNS</h2>
-                <p>O DNS é um servidor que pega o nome do site digitado, procura qual é o endereço IP correspondente e
-                    devolve esse IP para o navegador.
-                    Assim, o navegador pode fazer a requisição para o endereço certo e acessar o site.
-                    Por isso, quando contratamos uma hospedagem, também é necessário contratar um domínio.</p>
-                <ul>
-                    <li><b>Hospedagem:</b> Guarda os arquivos do site (HTML, imagens, etc.).</li>
-                    <li><b>Domínio:</b> Nome que as pessoas digitam para chegar até o seu site. Ex:
-                        <mark>(www.google.com)</mark>.
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h2>Conexão FTP</h2>
-                <p>FTP é um protocolo de transferência de arquivos. Ele permite que o cliente se conecte diretamente ao
-                    servidor para enviar ou baixar arquivos.
-                    Quando você contrata uma hospedagem, o provedor fornece os dados de acesso FTP (como host, usuário e
-                    senha), para que você consiga gerenciar os arquivos do seu site diretamente no servidor.</p>
-            </article>
-            <article>
-                <h2>Banco de Dados</h2>
-                <p>Um banco de dados é uma aplicação que serve para armazenar informações.
-                    Ele pode estar no mesmo servidor que o site ou em um servidor separado.
-                    É usado para guardar, organizar e recuperar dados como: </p>
-                <ul>
-                    <li>Usuários cadastrados</li>
-                    <li>Produtos de uma loja</li>
-                    <li>Comentários, postagens, mensagens etc.</li>
-                </ul>
-            </article>
-            <article>
-                <h2>Formulário</h2>
-                <p>Um formulário é uma parte de código HTML que contém campos para o usuário inserir informações. Ele
-                    pode ter vários tipos de campos, como:</p>
-                <ul>
-                    <li>Caixa de texto</li>
-                    <li>Botões de opção (radio)</li>
-                    <li>Caixas de seleção (checkbox)</li>
-                    <li>Campos de senha</li>
-                    <li>Botões de envio (submit)</li>
-                </ul>
+                <H2 id="#inicio">Índice:</H2>
+                <nav>
+                    <ul>
+                        <li><a href="#introducao">Introdução ao HTML</a></li>
+                        <li><a href="#historia-html">História rápida do HTML</a></li>
+                        <li><a href="#html-semantico-acessibilidade">HTML Semântico + Acessibilidade</a></li>
+                        <li><a href="#exemplo-pratico">Exemplo prático</a></li>
+                        <li><a href="#resumo-final">Resumo final</a></li>
+                        <li><a href="#listas">Listas em HTML</a></li>
+                        <li><a href="#outras-tags">Outras tags importantes</a></li>
+                        <li><a href="#citacoes">citações</a></li>
+                        <li><a href="#links">links</a></li>
+                    </ul>
+                </nav>
             </article>
         </section>
         <section>
-            <h1>Atributos importantes em formulários</h1>
-            <article id="atributosForm">
-                <table>
-                    <tr>
-                        <td>name:</td>
-                        <td>Dá nome ao campo. Útil para acessar o valor com Javascript ou enviar dados para o back-end.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>action:</td>
-                        <td>Define pra onde (qual URL) os dados do formulário vão ser enviados.</td>
-                    </tr>
-                    <tr>
-                        <td>method:</td>
-                        <td>Define como os dados vão ser enviados.<br>
-                            GET - Envia os dados pela URL. Não é seguro para senhas.<br>
-                            POST - Envia os dados dentro do corpo da requisição. Mais seguro.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>target:</td>
-                        <td>Diz onde abrir o resultado do envio do formulário: <br>
-                            _self (padrão): mesma aba <br>
-                            _blank: nova aba
+            <article>
+                <h2 id="#introducao">Introdução ao HTML</h2>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>autocomplete:</td>
-                        <td>Ativa ou desativa o autocompletar do navegador (sugestões de campos que já foram preenchidos
-                            antes).</td>
-                    </tr>
-                    <tr>
-                        <td>Eventos (on...):</td>
-                        <td>Tudo que começa com on é um evento HTML. Usado com JavaScript para reagir a ações. <br>
-                            onsubmit: algo acontece quando o formulário é enviado.
+                <p>Criado por Tim Berners-Lee no final dos anos 1980, o HTML (HyperText Markup Language) é a linguagem
+                    padrão usada para estruturar páginas web e organizar seu conteúdo. Diferente de linguagens de
+                    programação, o HTML não serve para criar lógica ou executar ações; ele é uma <mark>linguagem de
+                        marcação</mark> que define a estrutura e a organização do texto, imagens, links e outros
+                    elementos em uma página</p>
+                <p>O termo <i>markup</i> — ou "marcação" — indica que o HTML funciona como uma espécie de “etiqueta” que
+                    envolve os conteúdos, descrevendo sua função e hierarquia dentro do documento.</p>
+            </article>
 
-                        </td>
-                    </tr>
-                </table>
+            <article>
+                <h3 id="#historia-html">História do HTML</h3>
+                <p>O HTML foi criado por Tim Berners-Lee em 1989 enquanto trabalhava no CERN, com o objetivo de
+                    facilitar a troca de informações entre cientistas ao redor do mundo. Desde então, ele evoluiu
+                    bastante, passando por várias versões que trouxeram novos recursos e melhoraram a forma como
+                    estruturamos e apresentamos conteúdos na web. <q>A web é para todos</q>
+                </p>
+            </article>
+
+            <article>
+                <h4 id="#html-semantico-acessibilidade">HTML Semântico + Acessibilidade</h4>
+                <p>HTML semântico é a prática de usar as tags corretas para cada tipo de conteúdo, tornando o código
+                    mais organizado, legível e fácil de entender — tanto por pessoas quanto por tecnologias assistivas,
+                    como leitores de tela e motores de busca.</p>
+            </article>
+
+            <article>
+                <h5 id="#exemplo-pratico">Exemplo prático</h5>
+                <p>Uma estrutura semântica bem definida facilita a navegação e a compreensão do site, proporcionando uma
+                    experiência mais intuitiva para os usuários. Além disso, ela ajuda os motores de busca a
+                    identificar, indexar e classificar corretamente o conteúdo, melhorando a visibilidade do site nos
+                    resultados de pesquisa e tornando-o mais acessível para diferentes tipos de dispositivos e
+                    tecnologias assistivas.</p>
+            </article>
+
+            <article>
+                <h6 id="#resumo-final">Resumo final</h6>
+                <p>Sempre <u>valide seu código</u> HTML antes de publicá-lo para garantir que ele esteja livre de erros
+                    e siga os padrões web. A validação ajuda a evitar problemas de renderização nos navegadores, melhora
+                    a
+                    compatibilidade entre diferentes dispositivos e plataformas, além de facilitar a manutenção do site.
+                    Um código válido também contribui para a acessibilidade e otimiza o desempenho, proporcionando uma
+                    experiência mais consistente e confiável para todos os usuários.</p>
+            </article>
+
         </section>
+
+        <hr>
+
+        <section>
+            <article>
+                <h2 id="#listas">Listas em HTML</h2>
+                <h3>Lista não ordenada</h3>
+                <section>
+                    <ul>
+                        <li>Aprender as tags básicas</li>
+                        <li>Praticar no editor</li>
+                        <li>publicar o projeto</li>
+                    </ul>
+                </section>
+
+                <h3>Lista ordenada</h3>
+                <section>
+                    <ol>
+                        <li>Criar o arquivo HTML</li>
+                        <li>Adicionar a estrutura base</li>
+                        <li>Inserir o conteúdo</li>
+                    </ol>
+                </section>
+            </article>
+
+        </section>
+
+        <hr>
+
+        <section>
+            <article>
+                <h2 id="#outras-tags">Mais sobre tags</h2>
+                <p>Fórmula da água: H<sub>2</sub>O</p>
+                <p>Potência simples: 2<sup>3</sup></p>
+                <p>Texto com destaque: <strong>HTML semântico</strong></p>
+                <p>Texto riscado: <del>Essa tag é obsoleta</del></p>
+                <p>Exemplo com fonte colorida <font color="red">Texto vermelho</font><del> //tag font é depreciada</del></p>
+                <p>O HTML significa <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+            </article>
+
+            <hr>
+
+            <article>
+                <h2 id="#citacoes">Citação longa</h2>
+                <blockquote>
+                    "A acessibilidade na web é essencial para todos." - Tim Berners-Lee"
+                </blockquote>
+            </article>
+
+        </section>
+
     </main>
-    <footer></footer>
 
+    <hr>
 
-
+    <footer>
+        <h2 id="#links">Links</h2>
+        <p>Mais informações na ><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"> documentação do MDN</a>.
+            <br>
+            <small>Versão 1.0</small>
+            <small><a href="#inicio"></a>Voltar</small>
+        </p>
+    </footer>
 </body>
 
 </html>
